@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Minsung Kho — Graduate Researcher, UNIST</title>
+<meta name="description" content="Minsung Kho (고민성), graduate researcher at the Department of Mathematical Sciences, UNIST, working on supersymmetric gauge theories and toric Calabi–Yau geometry.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0D1320;
+    --surface: #131A2B;
+    --surface-alt: #0F1524;
+    --rule: #283050;
+    --text: #ECE7DA;
+    --text-muted: #8C93A8;
+    --accent: #C9A04C;
+    --accent-soft: rgba(201, 160, 76, 0.14);
+    --max-w: 920px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 500;
+    margin: 0;
+    color: var(--text);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+
+  .wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Header / Nav */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(13, 19, 32, 0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+  .nav-brand strong { color: var(--accent); font-weight: 500; }
+
+  .nav-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+  .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    color: var(--text);
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 6.5rem 0 5.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .hero-lattice {
+    position: absolute;
+    top: 50%;
+    right: -4%;
+    transform: translateY(-50%);
+    width: 480px;
+    height: 480px;
+    opacity: 0.16;
+    pointer-events: none;
+  }
+
+  .hero-inner { position: relative; z-index: 1; max-width: 620px; }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1.12;
+  }
+
+  .hero .kr-name {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+    font-style: italic;
+  }
+
+  .hero .tagline {
+    margin-top: 1.4rem;
+    font-size: 1.08rem;
+    color: var(--text-muted);
+    max-width: 540px;
+  }
+
+  .hero-actions {
+    margin-top: 2.2rem;
+    display: flex;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    color: var(--text);
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { border-color: var(--accent); text-decoration: none; background: var(--accent-soft); }
+  .btn-primary {
+    border-color: var(--accent);
+    color: var(--bg);
+    background: var(--accent);
+  }
+  .btn-primary:hover { background: #d9b15f; }
+
+  /* Sections */
+  .section { padding: 4.5rem 0; scroll-margin-top: 4.5rem; }
+  .section.alt { background: var(--surface-alt); }
+
+  .section-head { margin-bottom: 2.2rem; max-width: 600px; }
+  .section-head h2 { font-size: 1.9rem; }
+
+  .divider {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.55;
+  }
+
+  .prose p { color: var(--text-muted); margin: 0 0 1.1rem; max-width: 640px; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--text); font-weight: 500; }
+
+  /* Empty state cards */
+  .empty-card {
+    border: 1px dashed var(--rule);
+    border-radius: 8px;
+    padding: 2rem 1.8rem;
+    color: var(--text-muted);
+    font-size: 0.97rem;
+  }
+  .empty-card a { color: var(--accent); }
+
+  /* Publication / news card templates (hidden examples live in HTML comments) */
+  .pub-card, .news-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 0.9rem;
+  }
+  .pub-meta, .news-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .pub-title { font-family: 'Newsreader', serif; font-size: 1.15rem; margin: 0.4rem 0 0.3rem; font-weight: 500; }
+  .pub-authors { color: var(--text-muted); font-size: 0.92rem; margin: 0 0 0.5rem; }
+
+  /* Contact */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .contact-block h3 {
+    font-size: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.7rem;
+  }
+  .contact-block p { color: var(--text-muted); margin: 0.25rem 0; }
+  .contact-block a { color: var(--text); }
+  .contact-block a:hover { color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-block; }
+    .nav.open .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      padding: 1.2rem 1.5rem;
+      gap: 1rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .hero-lattice { width: 280px; height: 280px; opacity: 0.1; right: -10%; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" id="nav">
+    <span class="nav-brand">M.<strong>Kho</strong></span>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <svg class="hero-lattice" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g stroke="#C9A04C" stroke-width="1.4" fill="none">
+        <line x1="120" y1="120" x2="170" y2="120"/>
+        <line x1="120" y1="120" x2="120" y2="70"/>
+        <line x1="120" y1="120" x2="70" y2="70"/>
+        <line x1="120" y1="120" x2="70" y2="120"/>
+        <line x1="120" y1="120" x2="120" y2="170"/>
+        <line x1="120" y1="120" x2="170" y2="170"/>
+        <polygon points="170,120 120,70 70,70 70,120 120,170 170,170" />
+      </g>
+      <g fill="#C9A04C">
+        <circle cx="170" cy="120" r="4"/>
+        <circle cx="120" cy="70" r="4"/>
+        <circle cx="70" cy="70" r="4"/>
+        <circle cx="70" cy="120" r="4"/>
+        <circle cx="120" cy="170" r="4"/>
+        <circle cx="170" cy="170" r="4"/>
+        <circle cx="120" cy="120" r="4"/>
+      </g>
+    </svg>
+
+    <div class="wrap hero-inner">
+      <span class="eyebrow">UNIST · Department of Mathematical Sciences</span>
+      <h1>Minsung Kho<span class="kr-name">고민성</span></h1>
+      <p class="tagline">Graduate researcher working on supersymmetric gauge theories arising in string theory, with a focus on theories associated to toric Calabi–Yau manifolds.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://scholar.google.com/citations?user=WT3-Je4AAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="btn" href="mailto:minsung@unist.ac.kr">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Research</span>
+        <h2>Supersymmetric Gauge Theories &amp; Toric Geometry</h2>
+      </div>
+      <div class="prose">
+        <p>My research centers on <strong>supersymmetric gauge theories</strong> that arise within string theory, with particular emphasis on theories associated to <strong>toric Calabi–Yau manifolds</strong>. These geometries provide a rich dictionary between gauge theory data and combinatorial structures — lattice polytopes, triangulations, and brane configurations — that encode the physics of the corresponding quantum field theories.</p>
+        <p>I am a graduate student in the Department of Mathematical Sciences at UNIST, working under the supervision of <a href="https://rakkyeongseong.github.io/" target="_blank" rel="noopener">Professor Rak-Kyeong Seong</a> (<a href="https://rakkyeongseong.com/" target="_blank" rel="noopener">personal homepage ↗</a>), whose research group sits at the interface of mathematical physics, quantum field theory, and machine learning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Publications</span>
+        <h2>Publications &amp; Preprints</h2>
+      </div>
+
+      <div class="empty-card">
+        Publications and preprints will be listed here as they become available. In the meantime, my up-to-date academic record can be found on <a href="https://scholar.google.com/citations?user=WT3-Je4AAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar ↗</a>.
+      </div>
+
+      <!--
+        논문이 생기면 위 .empty-card 를 지우고 아래 형식을 복사해서 추가하세요.
+
+        <article class="pub-card">
+          <p class="pub-meta">Journal of High Energy Physics · 2026</p>
+          <h3 class="pub-title">Paper Title Goes Here</h3>
+          <p class="pub-authors">Minsung Kho, Rak-Kyeong Seong</p>
+          <a class="pub-link" href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener">View on arXiv ↗</a>
+        </article>
+      -->
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">News</span>
+        <h2>News</h2>
+      </div>
+
+      <div class="empty-card">
+        There's nothing here yet — but this space is ready for announcements: conference talks, workshop participation, awards, and more.
+      </div>
+
+      <!--
+        소식이 생기면 위 .empty-card 를 지우고 아래 형식을 복사해서 추가하세요.
+
+        <article class="news-card">
+          <p class="news-date">June 2026</p>
+          <h3 class="pub-title">Talk title or event name</h3>
+          <p class="pub-authors">Conference / Workshop name · Location</p>
+        </article>
+      -->
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h2>Get in Touch</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-block">
+          <h3>Affiliation</h3>
+          <p>Minsung Kho (고민성)</p>
+          <p>Department of Mathematical Sciences</p>
+          <p>Ulsan National Institute of Science and Technology (UNIST)</p>
+          <p>50 UNIST-gil, Ulsan, 44919, South Korea</p>
+        </div>
+        <div class="contact-block">
+          <h3>Links</h3>
+          <p><a href="mailto:minsung@unist.ac.kr">minsung@unist.ac.kr</a></p>
+          <p><a href="https://scholar.google.com/citations?user=WT3-Je4AAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar ↗</a></p>
+          <p><a href="https://inspirehep.net/authors/2672894?ui-citation-summary=true" target="_blank" rel="noopener">iNSPIRE-HEP ↗</a></p>
+          <p><a href="https://rakkyeongseong.github.io/" target="_blank" rel="noopener">Seong Research Group ↗</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Minsung Kho
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('nav');
+  navToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
