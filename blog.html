@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Blog — Minsung Kho</title>
+<meta name="description" content="Personal blog of Minsung Kho — everyday life, travel, books, hobbies, and short essays.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Tab navigation */
+  .tab-bar {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0;
+  }
+  .tab-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-muted);
+    padding: 0.6rem 1rem 0.8rem;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+    margin-bottom: -1px;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* Tab panels */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* Blog post card */
+  .blog-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 0.9rem;
+    transition: border-color 0.15s;
+  }
+  .blog-card:hover { border-color: var(--accent); }
+  .blog-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+  .blog-title {
+    font-family: 'Newsreader', serif;
+    font-size: 1.12rem;
+    font-weight: 500;
+    margin: 0.3rem 0 0.4rem;
+    color: var(--text);
+  }
+  .blog-body {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+  .blog-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin-top: 0.7rem;
+  }
+
+  /* Photo grid */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .photo-placeholder {
+    background: var(--surface);
+    border: 1px dashed var(--rule);
+    border-radius: 8px;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" id="nav">
+    <span class="nav-brand">M.<strong>Kho</strong></span>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="notes.html">Notes</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap page-head">
+    <svg class="page-head-lattice" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g stroke="#C9A04C" stroke-width="2.2" fill="none">
+        <line x1="120" y1="120" x2="170" y2="120"/>
+        <line x1="120" y1="120" x2="120" y2="70"/>
+        <line x1="120" y1="120" x2="70" y2="70"/>
+        <line x1="120" y1="120" x2="70" y2="120"/>
+        <line x1="120" y1="120" x2="120" y2="170"/>
+        <line x1="120" y1="120" x2="170" y2="170"/>
+        <polygon points="170,120 120,70 70,70 70,120 120,170 170,170" />
+      </g>
+      <g fill="#C9A04C">
+        <circle cx="170" cy="120" r="6"/>
+        <circle cx="120" cy="70" r="6"/>
+        <circle cx="70" cy="70" r="6"/>
+        <circle cx="70" cy="120" r="6"/>
+        <circle cx="120" cy="170" r="6"/>
+        <circle cx="170" cy="170" r="6"/>
+        <circle cx="120" cy="120" r="6"/>
+      </g>
+    </svg>
+    <span class="eyebrow">Blog</span>
+    <h1>Life & Thoughts</h1>
+    <p style="color:var(--text-muted); margin-top:0.8rem; font-size:0.97rem;">A space for things outside of research — travels, books, hobbies, and whatever is on my mind.</p>
+  </div>
+
+  <div class="wrap section">
+
+    <!-- Tab bar -->
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" role="tab" aria-selected="true"  data-tab="travel">📷 Travel & Life</button>
+      <button class="tab-btn"        role="tab" aria-selected="false" data-tab="books">📚 Books & Papers</button>
+      <button class="tab-btn"        role="tab" aria-selected="false" data-tab="hobbies">🎵 Hobbies</button>
+      <button class="tab-btn"        role="tab" aria-selected="false" data-tab="essays">✍️ Thoughts</button>
+    </div>
+
+    <!-- Travel & Life -->
+    <div class="tab-panel active" id="tab-travel">
+      <div class="empty-card">
+        No photos yet — travel and everyday moments will appear here soon.
+      </div>
+      <!--
+        사진을 추가하려면 위 .empty-card 를 지우고 아래 구조를 사용하세요.
+        이미지는 저장소의 blog/img/ 폴더에 넣어주세요.
+
+        <p class="blog-tag">Tokyo · March 2026</p>
+        <div class="photo-grid">
+          <img src="blog/img/tokyo1.jpg" alt="Tokyo" style="border-radius:8px; width:100%; object-fit:cover; aspect-ratio:4/3;">
+          <img src="blog/img/tokyo2.jpg" alt="Tokyo" style="border-radius:8px; width:100%; object-fit:cover; aspect-ratio:4/3;">
+        </div>
+        <p class="blog-body">A short caption or story about the trip.</p>
+        <p class="blog-date">March 2026</p>
+      -->
+    </div>
+
+    <!-- Books & Papers -->
+    <div class="tab-panel" id="tab-books">
+      <div class="empty-card">
+        Book and paper recommendations will appear here.
+      </div>
+      <!--
+        <article class="blog-card">
+          <p class="blog-tag">Book</p>
+          <h3 class="blog-title">The Road to Reality — Roger Penrose</h3>
+          <p class="blog-body">A sweeping tour of the mathematics and physics underlying our universe. Dense but deeply rewarding.</p>
+          <p class="blog-date">June 2026</p>
+        </article>
+      -->
+    </div>
+
+    <!-- Hobbies -->
+    <div class="tab-panel" id="tab-hobbies">
+      <div class="empty-card">
+        Hobby updates — music, exercise, and more — will appear here.
+      </div>
+      <!--
+        <article class="blog-card">
+          <p class="blog-tag">Music</p>
+          <h3 class="blog-title">What I've been listening to</h3>
+          <p class="blog-body">...</p>
+          <p class="blog-date">June 2026</p>
+        </article>
+      -->
+    </div>
+
+    <!-- Thoughts / Essays -->
+    <div class="tab-panel" id="tab-essays">
+      <div class="empty-card">
+        Short essays and passing thoughts will appear here.
+      </div>
+      <!--
+        <article class="blog-card">
+          <p class="blog-tag">Thought</p>
+          <h3 class="blog-title">Why I find toric geometry beautiful</h3>
+          <p class="blog-body">...</p>
+          <p class="blog-date">June 2026</p>
+        </article>
+      -->
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © 2026 Minsung Kho
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
