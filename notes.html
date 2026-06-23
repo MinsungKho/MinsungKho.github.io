@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Notes — Minsung Kho</title>
+<meta name="description" content="Personal physics notes by Minsung Kho.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .topic-section { margin-bottom: 3rem; }
+  .topic-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .note-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 0.7rem;
+    transition: border-color 0.15s ease;
+  }
+  .note-card:hover { border-color: var(--accent); }
+  .note-info { flex: 1; }
+  .note-name {
+    font-family: 'Newsreader', serif;
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: var(--text);
+    margin: 0 0 0.2rem;
+  }
+  .note-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+  .note-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--accent);
+    white-space: nowrap;
+    margin-left: 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 0.35rem 0.75rem;
+    transition: background 0.15s ease;
+  }
+  .note-link:hover { background: var(--accent-soft); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" id="nav">
+    <span class="nav-brand">M.<strong>Kho</strong></span>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="notes.html" class="active">Notes</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap page-head">
+    <svg class="page-head-lattice" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g stroke="#C9A04C" stroke-width="2.2" fill="none">
+        <line x1="120" y1="120" x2="170" y2="120"/>
+        <line x1="120" y1="120" x2="120" y2="70"/>
+        <line x1="120" y1="120" x2="70" y2="70"/>
+        <line x1="120" y1="120" x2="70" y2="120"/>
+        <line x1="120" y1="120" x2="120" y2="170"/>
+        <line x1="120" y1="120" x2="170" y2="170"/>
+        <polygon points="170,120 120,70 70,70 70,120 120,170 170,170" />
+      </g>
+      <g fill="#C9A04C">
+        <circle cx="170" cy="120" r="6"/>
+        <circle cx="120" cy="70" r="6"/>
+        <circle cx="70" cy="70" r="6"/>
+        <circle cx="70" cy="120" r="6"/>
+        <circle cx="120" cy="170" r="6"/>
+        <circle cx="170" cy="170" r="6"/>
+        <circle cx="120" cy="120" r="6"/>
+      </g>
+    </svg>
+    <span class="eyebrow">Notes</span>
+    <h1>Physics Notes</h1>
+    <p style="color:var(--text-muted); margin-top:0.8rem; font-size:0.97rem;">Personal notes on topics in theoretical physics. These are informal write-ups intended for my own reference and for anyone who might find them useful.</p>
+  </div>
+
+  <div class="wrap section">
+
+    <!-- Quantum Field Theory -->
+    <div class="topic-section" id="qft">
+      <p class="topic-title">Quantum Field Theory</p>
+      <div class="empty-card">No notes yet — check back soon.</div>
+      <!--
+        노트가 생기면 위 .empty-card 를 지우고 아래 형식을 복사해서 추가하세요.
+        PDF는 저장소의 notes/qft/ 폴더에 넣어주세요.
+
+        <div class="note-card">
+          <div class="note-info">
+            <p class="note-name">Path Integral Formulation</p>
+            <p class="note-date">June 2026</p>
+          </div>
+          <a class="note-link" href="notes/qft/path-integral.pdf" target="_blank">PDF ↗</a>
+        </div>
+      -->
+    </div>
+
+    <!-- General Relativity -->
+    <div class="topic-section" id="gr">
+      <p class="topic-title">General Relativity</p>
+      <div class="empty-card">No notes yet — check back soon.</div>
+      <!--
+        <div class="note-card">
+          <div class="note-info">
+            <p class="note-name">Note title</p>
+            <p class="note-date">Month Year</p>
+          </div>
+          <a class="note-link" href="notes/gr/filename.pdf" target="_blank">PDF ↗</a>
+        </div>
+      -->
+    </div>
+
+    <!-- String Theory -->
+    <div class="topic-section" id="string">
+      <p class="topic-title">String Theory</p>
+      <div class="empty-card">No notes yet — check back soon.</div>
+    </div>
+
+    <!-- Supersymmetry -->
+    <div class="topic-section" id="susy">
+      <p class="topic-title">Supersymmetry</p>
+      <div class="empty-card">No notes yet — check back soon.</div>
+    </div>
+
+    <!-- Mathematical Physics -->
+    <div class="topic-section" id="mathphys">
+      <p class="topic-title">Mathematical Physics</p>
+      <div class="empty-card">No notes yet — check back soon.</div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © 2026 Minsung Kho
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
