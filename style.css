@@ -361,11 +361,11 @@ button:focus-visible {
   border-radius: 12px;
   padding: 1.4rem 1.4rem 1rem;
   box-shadow: 4px 4px 0 var(--shadow);
-  flex: 1 1 260px;
-  max-width: 340px;
+  flex: 0 1 280px;
+  max-width: 280px;
   text-align: center;
 }
-.fig-card svg { width: 100%; height: auto; max-width: 260px; }
+.fig-card svg { width: 100%; height: auto; max-width: 210px; }
 .fig-caption {
   font-family: var(--font-pixel);
   font-size: 0.88rem;
