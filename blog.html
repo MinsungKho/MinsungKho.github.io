@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
   /* Tab navigation */
@@ -21,7 +21,7 @@
     padding-bottom: 0;
   }
   .tab-btn {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-pixel);
     font-size: 0.82rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -45,14 +45,15 @@
   .blog-card {
     background: var(--surface);
     border: 1px solid var(--rule);
-    border-radius: 8px;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 var(--shadow);
     padding: 1.4rem 1.6rem;
     margin-bottom: 0.9rem;
     transition: border-color 0.15s;
   }
   .blog-card:hover { border-color: var(--accent); }
   .blog-tag {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-pixel);
     font-size: 0.76rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -60,7 +61,7 @@
     margin-bottom: 0.4rem;
   }
   .blog-title {
-    font-family: 'Newsreader', serif;
+    font-family: var(--font-pixel);
     font-size: 1.12rem;
     font-weight: 500;
     margin: 0.3rem 0 0.4rem;
@@ -73,7 +74,7 @@
     line-height: 1.6;
   }
   .blog-date {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-pixel);
     font-size: 0.76rem;
     color: var(--text-muted);
     margin-top: 0.7rem;
@@ -89,13 +90,14 @@
   .photo-placeholder {
     background: var(--surface);
     border: 1px dashed var(--rule);
-    border-radius: 8px;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 var(--shadow);
     aspect-ratio: 4/3;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-pixel);
     font-size: 0.78rem;
   }
 </style>
@@ -120,26 +122,6 @@
 
 <main>
   <div class="wrap page-head">
-    <svg class="page-head-lattice" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g stroke="#C9A04C" stroke-width="2.2" fill="none">
-        <line x1="120" y1="120" x2="170" y2="120"/>
-        <line x1="120" y1="120" x2="120" y2="70"/>
-        <line x1="120" y1="120" x2="70" y2="70"/>
-        <line x1="120" y1="120" x2="70" y2="120"/>
-        <line x1="120" y1="120" x2="120" y2="170"/>
-        <line x1="120" y1="120" x2="170" y2="170"/>
-        <polygon points="170,120 120,70 70,70 70,120 120,170 170,170" />
-      </g>
-      <g fill="#C9A04C">
-        <circle cx="170" cy="120" r="6"/>
-        <circle cx="120" cy="70" r="6"/>
-        <circle cx="70" cy="70" r="6"/>
-        <circle cx="70" cy="120" r="6"/>
-        <circle cx="120" cy="170" r="6"/>
-        <circle cx="170" cy="170" r="6"/>
-        <circle cx="120" cy="120" r="6"/>
-      </g>
-    </svg>
     <span class="eyebrow">Blog</span>
     <h1>Life & Thoughts</h1>
     <p style="color:var(--text-muted); margin-top:0.8rem; font-size:0.97rem;">A space for things outside of research — travels, books, hobbies, and whatever is on my mind.</p>

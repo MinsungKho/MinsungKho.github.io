@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,26 +31,6 @@
 
 <main>
   <div class="wrap page-head">
-    <svg class="page-head-lattice" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g stroke="#C9A04C" stroke-width="2.2" fill="none">
-        <line x1="120" y1="120" x2="170" y2="120"/>
-        <line x1="120" y1="120" x2="120" y2="70"/>
-        <line x1="120" y1="120" x2="70" y2="70"/>
-        <line x1="120" y1="120" x2="70" y2="120"/>
-        <line x1="120" y1="120" x2="120" y2="170"/>
-        <line x1="120" y1="120" x2="170" y2="170"/>
-        <polygon points="170,120 120,70 70,70 70,120 120,170 170,170" />
-      </g>
-      <g fill="#C9A04C">
-        <circle cx="170" cy="120" r="6"/>
-        <circle cx="120" cy="70" r="6"/>
-        <circle cx="70" cy="70" r="6"/>
-        <circle cx="70" cy="120" r="6"/>
-        <circle cx="120" cy="170" r="6"/>
-        <circle cx="170" cy="170" r="6"/>
-        <circle cx="120" cy="120" r="6"/>
-      </g>
-    </svg>
     <span class="eyebrow">Research</span>
     <h1>Supersymmetric Gauge Theories &amp; Toric Geometry</h1>
   </div>
@@ -58,6 +38,67 @@
   <div class="wrap section">
     <div class="prose">
       <p>My research centers on <strong>supersymmetric gauge theories</strong> that arise within string theory, with particular emphasis on theories associated to <strong>toric Calabi–Yau manifolds</strong>. This rich interplay gives rise to elegant combinatorial and algebraic techniques for studying the vacuum structure, dualities, and dynamics of the corresponding gauge theories. I am particularly interested in analyzing and extending the mathematical and physical structures that emerge from this interplay.</p>
+    </div>
+
+    <div class="fig-row">
+
+      <figure class="fig-card" style="margin:0">
+        <svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quiver diagram of the F0 theory: four gauge nodes in a square with two arrows along each edge, oriented cyclically">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#5de0d2"/>
+            </marker>
+          </defs>
+          <g stroke="#7f88c9" stroke-width="2" fill="none" marker-end="url(#ah)">
+            <!-- 1 -> 2 (top) -->
+            <line x1="90" y1="59" x2="164" y2="59"/>
+            <line x1="90" y1="71" x2="164" y2="71"/>
+            <!-- 2 -> 3 (right) -->
+            <line x1="189" y1="90" x2="189" y2="164"/>
+            <line x1="201" y1="90" x2="201" y2="164"/>
+            <!-- 3 -> 4 (bottom) -->
+            <line x1="170" y1="189" x2="96" y2="189"/>
+            <line x1="170" y1="201" x2="96" y2="201"/>
+            <!-- 4 -> 1 (left) -->
+            <line x1="59" y1="170" x2="59" y2="96"/>
+            <line x1="71" y1="170" x2="71" y2="96"/>
+          </g>
+          <g fill="#0e1224" stroke="#f2c14e" stroke-width="2.5">
+            <circle cx="65" cy="65" r="21"/>
+            <circle cx="195" cy="65" r="21"/>
+            <circle cx="195" cy="195" r="21"/>
+            <circle cx="65" cy="195" r="21"/>
+          </g>
+          <g fill="#eceaf6" font-family="'IBM Plex Mono', monospace" font-size="16" text-anchor="middle" dominant-baseline="central">
+            <text x="65" y="66">1</text>
+            <text x="195" y="66">2</text>
+            <text x="195" y="196">3</text>
+            <text x="65" y="196">4</text>
+          </g>
+        </svg>
+        <figcaption class="fig-caption"><strong>F₀</strong> quiver diagram</figcaption>
+      </figure>
+
+      <figure class="fig-card" style="margin:0">
+        <svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Toric diagram of F0: a square with vertices at the four unit lattice points and one internal point at the origin">
+          <polygon points="130,60 200,130 130,200 60,130" fill="rgba(242,193,78,0.08)" stroke="#f2c14e" stroke-width="2.5" stroke-linejoin="round"/>
+          <g fill="#3a4178">
+            <circle cx="60" cy="60" r="4"/>
+            <circle cx="200" cy="60" r="4"/>
+            <circle cx="60" cy="200" r="4"/>
+            <circle cx="200" cy="200" r="4"/>
+          </g>
+          <g fill="#5de0d2">
+            <circle cx="130" cy="60" r="6.5"/>
+            <circle cx="200" cy="130" r="6.5"/>
+            <circle cx="130" cy="200" r="6.5"/>
+            <circle cx="60" cy="130" r="6.5"/>
+          </g>
+          <circle cx="130" cy="130" r="6.5" fill="#ff6ba9"/>
+        </svg>
+        <figcaption class="fig-caption"><strong>F₀</strong> toric diagram</figcaption>
+      </figure>
+
     </div>
   </div>
 </main>
