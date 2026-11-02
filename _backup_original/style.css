@@ -1,0 +1,277 @@
+:root {
+  --bg: #0D1320;
+  --surface: #131A2B;
+  --surface-alt: #0F1524;
+  --rule: #283050;
+  --text: #ECE7DA;
+  --text-muted: #8C93A8;
+  --accent: #C9A04C;
+  --accent-soft: rgba(201, 160, 76, 0.14);
+  --max-w: 920px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header / Nav */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(13, 19, 32, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.nav-brand strong { color: var(--accent); font-weight: 500; }
+
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+.nav-links a:hover { color: var(--accent); text-decoration: none; }
+.nav-links a.active { color: var(--accent); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  color: var(--text);
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Hero (home page only) */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6.5rem 0 5.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero-lattice {
+  position: absolute;
+  top: 50%;
+  right: -4%;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 480px;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.hero-inner { position: relative; z-index: 1; max-width: 620px; }
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.12;
+}
+
+.hero .kr-name {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+.hero .tagline {
+  margin-top: 1.4rem;
+  font-size: 1.08rem;
+  color: var(--text-muted);
+  max-width: 540px;
+}
+
+.hero-actions {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+  color: var(--text);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.btn:hover { border-color: var(--accent); text-decoration: none; background: var(--accent-soft); }
+.btn-primary {
+  border-color: var(--accent);
+  color: var(--bg);
+  background: var(--accent);
+}
+.btn-primary:hover { background: #d9b15f; }
+
+/* Page header (subpages: research / publications / news / contact) */
+.page-head {
+  padding: 4.5rem 0 1rem;
+  max-width: 680px;
+}
+.page-head h1 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.18;
+}
+.page-head-lattice {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1.2rem;
+  opacity: 0.7;
+}
+
+/* Sections */
+.section { padding: 3rem 0 4.5rem; scroll-margin-top: 4.5rem; }
+.section.alt { background: var(--surface-alt); }
+
+.section-head { margin-bottom: 2.2rem; max-width: 600px; }
+.section-head h2 { font-size: 1.9rem; }
+
+.prose p { color: var(--text-muted); margin: 0 0 1.1rem; max-width: 640px; }
+.prose p:last-child { margin-bottom: 0; }
+.prose strong { color: var(--text); font-weight: 500; }
+
+/* Empty state cards */
+.empty-card {
+  border: 1px dashed var(--rule);
+  border-radius: 8px;
+  padding: 2rem 1.8rem;
+  color: var(--text-muted);
+  font-size: 0.97rem;
+}
+.empty-card a { color: var(--accent); }
+
+/* Publication / news card templates (hidden examples live in HTML comments) */
+.pub-card, .news-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 0.9rem;
+}
+.pub-meta, .news-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.pub-title { font-family: 'Newsreader', serif; font-size: 1.15rem; margin: 0.4rem 0 0.3rem; font-weight: 500; }
+.pub-authors { color: var(--text-muted); font-size: 0.92rem; margin: 0 0 0.5rem; }
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.contact-block h3 {
+  font-size: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.7rem;
+}
+.contact-block p { color: var(--text-muted); margin: 0.25rem 0; }
+.contact-block a { color: var(--text); }
+.contact-block a:hover { color: var(--accent); }
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: inline-block; }
+  .nav.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    padding: 1.2rem 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-lattice { width: 280px; height: 280px; opacity: 0.1; right: -10%; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
